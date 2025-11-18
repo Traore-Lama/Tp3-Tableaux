@@ -60,7 +60,6 @@ public class Menu
 
                     break;
                 case 2:
-                    int[] tabExo2 = new int[] {11,32,41,632,10};
                     int[] tabP = new int[] {32,632,10};
                     int[] tabL = new int[] {11,41};
                     System.out.print("Valeur Paires : " + tabP[0] + " - " + tabP[1] + " - " + tabP[2]);
@@ -70,11 +69,17 @@ public class Menu
                     System.out.println("La Somme Paires est : " + (tabP[0] + tabP[1] + tabP[2]));
                     System.out.println("La Somme Impaires est : " + (tabL[0] + tabL[1]));
 
-
                     break;
                 case 3:
                     int[] tab1Exo3 = new int[] {4,8,7,12};
                     int[] tab2Exo3 = new int[] {3,6};
+                    int Schtroumpf;
+                    System.out.print(tab1Exo3[0] + " - " + tab1Exo3[1] + " - " + tab1Exo3[2] + " - " + tab1Exo3[3]);
+                    System.out.println();
+                    System.out.print(tab2Exo3[0] + " - " + tab2Exo3[1]);
+                    System.out.println();
+                    Schtroumpf = tab1Exo3[0] * tab2Exo3[0] +  tab1Exo3[0] * tab2Exo3[1] +  tab1Exo3[1] * tab2Exo3[0] + tab1Exo3[1] * tab2Exo3[1] + tab1Exo3[2] * tab2Exo3[0] + tab1Exo3[2] * tab2Exo3[1] + tab1Exo3[3] * tab2Exo3[0] + tab1Exo3[3] * tab2Exo3[1];
+                    System.out.println("Le Schtroumpf est de : "  + Schtroumpf);
 
                     break;
                 case 4:
