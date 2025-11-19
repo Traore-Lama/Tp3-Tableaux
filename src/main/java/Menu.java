@@ -84,6 +84,14 @@ public class Menu
                     break;
                 case 4:
                     int[][] tabExo4 = new int[4][4];
+                    int nonNull;
+                    for ( int i = 0; i < tabExo4.length; i++ )
+                    {
+                        nonNull = 0;
+
+                        if (tabExo4[i][i] == null) {
+                            System.out.println("L’élément est null");
+                    }
 
                     // Exemple n°1
                     /*tabExo4[0][0] = 1;tabExo4[0][1] = 0;tabExo4[0][2] = 0;tabExo4[0][3] = 0;
