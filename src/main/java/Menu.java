@@ -2,17 +2,13 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 
-public class Menu
-{
-    public static void main(String[] args)
-    {
+public class Menu {
+    public static void main(String[] args) {
         int choix;
         Scanner scanner = new Scanner(System.in);
         //DecimalFormat decimalFormat = new DecimalFormat("#.##");
-        do
-        {
-            do
-            {
+        do {
+            do {
                 System.out.println("1 - Exercice n°1");
                 System.out.println("2 - Exercice n°2");
                 System.out.println("3 - Exercice n°3");
@@ -22,14 +18,13 @@ public class Menu
                 choix = scanner.nextInt();
             } while (choix > 4);
 
-            switch (choix)
-            {
+            switch (choix) {
                 case 0:
                     System.out.println("Fin du programme");
                     break;
                 case 1:
                     // Je declare un tableau
-                    // Je luis mets 5 valeur
+                    // Je luis mets 5 values
                     int[] tab = new int[5];
 
                     // Je rempli le tableau
@@ -40,8 +35,7 @@ public class Menu
                     tab[4] = 999;
 
                     //Parcourir le Tableau
-                    for ( int i = 0; i < tab.length; i++ )
-                    {
+                    for (int i = 0; i < tab.length; i++) {
                         System.out.print(tab[i] + "-");
                     }
                     //Pour sauter une ligne
@@ -49,19 +43,17 @@ public class Menu
 
                     //Affiche la Valeur la PLus Grande
                     int max = 0;
-                    for (int i = 0; i < tab.length; i++ )
-                    {
-                        if ( tab[i] > max )
-                        {
+                    for (int i = 0; i < tab.length; i++) {
+                        if (tab[i] > max) {
                             max = tab[i];
                         }
                     }
-                    System.out.println("La + Grande valeur est : " + max);
+                    System.out.println("La + Grande values est : " + max);
 
                     break;
                 case 2:
-                    int[] tabP = new int[] {32,632,10};
-                    int[] tabL = new int[] {11,41};
+                    int[] tabP = new int[]{32, 632, 10};
+                    int[] tabL = new int[]{11, 41};
                     System.out.print("Valeur Paires : " + tabP[0] + " - " + tabP[1] + " - " + tabP[2]);
                     System.out.println();
                     System.out.print("Valeur Impaires : " + tabL[0] + " - " + tabL[1]);
@@ -70,28 +62,34 @@ public class Menu
                     System.out.println("La Somme Impaires est : " + (tabL[0] + tabL[1]));
 
                     break;
+
                 case 3:
-                    int[] tab1Exo3 = new int[] {4,8,7,12};
-                    int[] tab2Exo3 = new int[] {3,6};
+                    int[] tab1Exo3 = new int[]{4, 8, 7, 12};
+                    int[] tab2Exo3 = new int[]{3, 6};
                     int Schtroumpf;
                     System.out.print(tab1Exo3[0] + " - " + tab1Exo3[1] + " - " + tab1Exo3[2] + " - " + tab1Exo3[3]);
                     System.out.println();
                     System.out.print(tab2Exo3[0] + " - " + tab2Exo3[1]);
                     System.out.println();
-                    Schtroumpf = tab1Exo3[0] * tab2Exo3[0] +  tab1Exo3[0] * tab2Exo3[1] +  tab1Exo3[1] * tab2Exo3[0] + tab1Exo3[1] * tab2Exo3[1] + tab1Exo3[2] * tab2Exo3[0] + tab1Exo3[2] * tab2Exo3[1] + tab1Exo3[3] * tab2Exo3[0] + tab1Exo3[3] * tab2Exo3[1];
-                    System.out.println("Le Schtroumpf est de : "  + Schtroumpf);
-
+                    Schtroumpf = tab1Exo3[0] * tab2Exo3[0] + tab1Exo3[0] * tab2Exo3[1] + tab1Exo3[1] * tab2Exo3[0] + tab1Exo3[1] * tab2Exo3[1] + tab1Exo3[2] * tab2Exo3[0] + tab1Exo3[2] * tab2Exo3[1] + tab1Exo3[3] * tab2Exo3[0] + tab1Exo3[3] * tab2Exo3[1];
+                    System.out.println("Le Schtroumpf est de : " + Schtroumpf);
                     break;
+
                 case 4:
                     int[][] tabExo4 = new int[4][4];
-                    int nonNull;
-                    for ( int i = 0; i < tabExo4.length; i++ )
+                    int values = 0;
+                    int ligne;
+                    for (int i =0; i < tabExo4.length; i++)
                     {
-                        nonNull = 0;
-
-                        if (tabExo4[i][i] == null) {
-                            System.out.println("L’élément est null");
+                        System.out.println(tabExo4[i][i] + " - " + tabExo4[i][i] + " - " + tabExo4[i][i] + " - " + tabExo4[i][i]);
+                        if (tabExo4[i][i] > values)
+                        {
+                            tabExo4[i][i] = values;
+                        }
                     }
+                    System.out.println("Valeurs : " + values);
+                    System.out.println("Lignes : ");
+                    System.out.println("Colones : ");
 
                     // Exemple n°1
                     /*tabExo4[0][0] = 1;tabExo4[0][1] = 0;tabExo4[0][2] = 0;tabExo4[0][3] = 0;
@@ -105,10 +103,8 @@ public class Menu
                     tabExo4[1][0] = 3;tabExo4[1][1] = 4;tabExo4[1][2] = 0;tabExo4[1][3] = 0;
                     tabExo4[2][0] = 5;tabExo4[2][1] = 6;tabExo4[2][2] = 0;tabExo4[2][3] = 0;
                     tabExo4[3][0] = 7;tabExo4[3][1] = 8;tabExo4[3][2] = 0;tabExo4[3][3] = 0;
-
-
                     break;
             }
-        }while (choix != 0);
+        } while (choix != 0);
     }
 }
