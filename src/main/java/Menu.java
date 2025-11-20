@@ -79,13 +79,18 @@ public class Menu {
                     int[][] tabExo4 = new int[4][4];
                     int values = 0;
                     int ligne;
-                    for (int i =0; i < tabExo4.length; i++)
+                    for (int i = 0; i < tabExo4.length; i++)
                     {
-                        for (int j = 0; j < tabExo4.length; j++)
+                        for (int j = 0; j < tabExo4[i].length; j++)
                         {
-                            tabExo4[i][j]  = i + j;
-                            System.out.println(tabExo4[i][j] + " - " +  tabExo4[i][j] + " - " + tabExo4[i][j] + " - " + tabExo4[i][j]);
+                            tabExo4[i][j] = i + j;
+                            System.out.print(tabExo4[i][j]);
+                            if(j < tabExo4[i].length - 1)
+                            {
+                                System.out.print(" - ");
+                            }
                         }
+                        System.out.println();
                     }
                     System.out.println("Valeurs : " + values);
                     System.out.println("Lignes : ");
