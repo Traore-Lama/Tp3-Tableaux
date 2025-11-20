@@ -84,7 +84,7 @@ public class Menu {
                         for (int j = 0; j < tabExo4.length; j++)
                         {
                             tabExo4[i][j]  = i + j;
-                            System.out.println(tabExo4[i][j] + " - " +  tabExo4[j][i] + " - " + tabExo4[i][j] + " - " + tabExo4[j][i]);
+                            System.out.println(tabExo4[i][j] + " - " +  tabExo4[i][j] + " - " + tabExo4[i][j] + " - " + tabExo4[i][j]);
                         }
                     }
                     System.out.println("Valeurs : " + values);
