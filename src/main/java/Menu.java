@@ -54,6 +54,15 @@ public class Menu {
                 case 2:
                     int[] tabP = new int[]{32, 632, 10};
                     int[] tabL = new int[]{11, 41};
+
+                    // Ton code n'est pas bon
+                    // Il faut 3 tableaux
+                    // 1 tableau principal qui est déjà rempli avec des valeurs paires et/ou impaires
+                    // 2 autres tableaux vides qu'il faudra remplir avec chaque case du tableau principal
+                    // si celle-ci est paire ou impaire
+                    // Il faut faire une boucle pour parcourir le tableau principal
+
+
                     System.out.print("Valeur Paires : " + tabP[0] + " - " + tabP[1] + " - " + tabP[2]);
                     System.out.println();
                     System.out.print("Valeur Impaires : " + tabL[0] + " - " + tabL[1]);
@@ -67,6 +76,10 @@ public class Menu {
                     int[] tab1Exo3 = new int[]{4, 8, 7, 12};
                     int[] tab2Exo3 = new int[]{3, 6};
                     int Schtroumpf;
+
+                    // Même remarque il faut faire des boucles
+                    // Il faut que le programme fonctionne quel que soit le contenu de chaque tableau
+
                     System.out.print(tab1Exo3[0] + " - " + tab1Exo3[1] + " - " + tab1Exo3[2] + " - " + tab1Exo3[3]);
                     System.out.println();
                     System.out.print(tab2Exo3[0] + " - " + tab2Exo3[1]);
@@ -77,24 +90,6 @@ public class Menu {
 
                 case 4:
                     int[][] tabExo4 = new int[4][4];
-                    int values = 0;
-                    int ligne;
-                    for (int i = 0; i < tabExo4.length; i++)
-                    {
-                        for (int j = 0; j < tabExo4[i].length; j++)
-                        {
-                            tabExo4[i][j] = i + j;
-                            System.out.print(tabExo4[i][j]);
-                            if(j < tabExo4[i].length - 1)
-                            {
-                                System.out.print(" - ");
-                            }
-                        }
-                        System.out.println();
-                    }
-                    System.out.println("Valeurs : " + values);
-                    System.out.println("Lignes : ");
-                    System.out.println("Colones : ");
 
                     // Exemple n°1
                     /*tabExo4[0][0] = 1;tabExo4[0][1] = 0;tabExo4[0][2] = 0;tabExo4[0][3] = 0;
@@ -108,6 +103,32 @@ public class Menu {
                     tabExo4[1][0] = 3;tabExo4[1][1] = 4;tabExo4[1][2] = 0;tabExo4[1][3] = 0;
                     tabExo4[2][0] = 5;tabExo4[2][1] = 6;tabExo4[2][2] = 0;tabExo4[2][3] = 0;
                     tabExo4[3][0] = 7;tabExo4[3][1] = 8;tabExo4[3][2] = 0;tabExo4[3][3] = 0;
+
+                    int values = 0;
+                    int ligne;
+
+                    // Oui pour les 2 boucles
+                    for (int i = 0; i < tabExo4.length; i++)
+                    {
+                        for (int j = 0; j < tabExo4[i].length; j++)
+                        {
+                            // Il faut tester si la case est nulle ou pas
+                            // Pour afficher le numéro de la ligne, donc i
+                            // Pour afficher le numéro de la colonne, donc j
+                            tabExo4[i][j] = i + j;
+                            System.out.print(tabExo4[i][j]);
+                            if(j < tabExo4[i].length - 1)
+                            {
+                                System.out.print(" - ");
+                            }
+                        }
+                        System.out.println();
+                    }
+                    System.out.println("Valeurs : " + values);
+                    System.out.println("Lignes : ");
+                    System.out.println("Colones : ");
+
+
                     break;
             }
         } while (choix != 0);
