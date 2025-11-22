@@ -52,8 +52,28 @@ public class Menu {
 
                     break;
                 case 2:
-                    int[] tabP = new int[]{32, 632, 10};
-                    int[] tabL = new int[]{11, 41};
+                    int[] tabExo2 = new int[]{11,41,32,632,10};
+                    int[] tabP = new int[tabExo2.length];
+                    int[] tabL = new int[tabExo2.length];
+                    int paires = 0;
+                    int impaires = 0;
+                    int sommePaires = 0;
+                    int sommeImpaires = 0;
+
+                    for (int i = 0; i < tabExo2.length; i++)
+                    {
+                        if (tabExo2[i] % 2 == 0)
+                        {
+                            tabP[paires] = tabExo2[i];
+                            sommePaires += tabExo2[i];
+                            paires++;
+                        }else
+                        {
+                            tabL[impaires] = tabExo2[i];
+                            sommeImpaires += tabExo2[i];
+                            impaires++;
+                        }
+                    }
 
                     // Ton code n'est pas bon
                     // Il faut 3 tableaux
@@ -62,14 +82,23 @@ public class Menu {
                     // si celle-ci est paire ou impaire
                     // Il faut faire une boucle pour parcourir le tableau principal
 
-
-                    System.out.print("Valeur Paires : " + tabP[0] + " - " + tabP[1] + " - " + tabP[2]);
+                    System.out.print("Valeurs Paires : ");
+                    for (int i = 0; i < paires; i++)
+                    {
+                        System.out.print(tabP[i] + " - ");
+                    }
                     System.out.println();
-                    System.out.print("Valeur Impaires : " + tabL[0] + " - " + tabL[1]);
-                    System.out.println();
-                    System.out.println("La Somme Paires est : " + (tabP[0] + tabP[1] + tabP[2]));
-                    System.out.println("La Somme Impaires est : " + (tabL[0] + tabL[1]));
 
+                    System.out.print("Valeurs Impaires : ");
+                    for (int i = 0; i < impaires; i++)
+                    {
+                        System.out.print(tabL[i] + " - ");
+                    }
+
+                    System.out.println();
+
+                    System.out.println("La Somme Paires est : " + sommePaires);
+                    System.out.println("La Somme Impaires est : "  + sommeImpaires);
                     break;
 
                 case 3:
