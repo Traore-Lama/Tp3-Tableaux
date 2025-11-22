@@ -104,6 +104,7 @@ public class Menu {
                     tabExo4[2][0] = 5;tabExo4[2][1] = 6;tabExo4[2][2] = 0;tabExo4[2][3] = 0;
                     tabExo4[3][0] = 7;tabExo4[3][1] = 8;tabExo4[3][2] = 0;tabExo4[3][3] = 0;
 
+
                     int values = 0;
                     int ligne;
 
