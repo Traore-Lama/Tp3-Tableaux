@@ -55,56 +55,48 @@ public class Menu {
                     int[] tabExo2 = new int[]{11,41,32,632,10};
                     int[] tabP = new int[tabExo2.length];
                     int[] tabL = new int[tabExo2.length];
-                    int paires = 0;
-                    int impaires = 0;
-                    int sommePaires = 0;
-                    int sommeImpaires = 0;
+                    int pa = 0;
+                    int im = 0;
+                    int sommeP = 0;
+                    int sommeI = 0;
 
-                    for (int i = 0; i < tabExo2.length; i++)
+                    for (int j = 0; j < tabExo2.length; j++)
                     {
-                        if (tabExo2[i] % 2 == 0)
+                        if (tabExo2[j] % 2 == 0)
                         {
-                            tabP[paires] = tabExo2[i];
-                            sommePaires += tabExo2[i];
-                            paires++;
+                           tabP[pa] = tabExo2[j];
+                           sommeP += tabP[pa];
+                            pa++;
                         }else
                         {
-                            tabL[impaires] = tabExo2[i];
-                            sommeImpaires += tabExo2[i];
-                            impaires++;
+                            tabL[im] = tabExo2[j];
+                            sommeI += tabL[im];
+                            im++;
                         }
                     }
 
-                    // Ton code n'est pas bon
-                    // Il faut 3 tableaux
-                    // 1 tableau principal qui est déjà rempli avec des valeurs paires et/ou impaires
-                    // 2 autres tableaux vides qu'il faudra remplir avec chaque case du tableau principal
-                    // si celle-ci est paire ou impaire
-                    // Il faut faire une boucle pour parcourir le tableau principal
-
-                    System.out.print("Valeurs Paires : ");
-                    for (int i = 0; i < paires; i++)
+                    System.out.println("Valeurs Paires : ");
+                    for (int j = 0; j < pa; j++)
                     {
-                        System.out.print(tabP[i] + " - ");
+                        System.out.print(tabP[j] + " - ");
                     }
                     System.out.println();
 
-                    System.out.print("Valeurs Impaires : ");
-                    for (int i = 0; i < impaires; i++)
+                    System.out.println("Valeurs Impaires : ");
+                    for (int j = 0; j < im; j++)
                     {
-                        System.out.print(tabL[i] + " - ");
+                        System.out.print(tabL[j] + " - ");
                     }
-
                     System.out.println();
 
-                    System.out.println("La Somme Paires est : " + sommePaires);
-                    System.out.println("La Somme Impaires est : "  + sommeImpaires);
+                    System.out.println("La Somme Paires est : " + sommeP);
+                    System.out.println("La Somme Impaires est : "  + sommeI);
                     break;
 
                 case 3:
                     int[] tab1Exo3 = new int[]{4, 8, 7, 12};
                     int[] tab2Exo3 = new int[]{3, 6};
-                    int Schtroumpf;
+                    int Schtroumpf = 0;
 
                     // Même remarque il faut faire des boucles
                     // Il faut que le programme fonctionne quel que soit le contenu de chaque tableau
@@ -121,7 +113,14 @@ public class Menu {
                     }
                     System.out.println();
 
-                    Schtroumpf = tab1Exo3[0] * tab2Exo3[0] + tab1Exo3[0] * tab2Exo3[1] + tab1Exo3[1] * tab2Exo3[0] + tab1Exo3[1] * tab2Exo3[1] + tab1Exo3[2] * tab2Exo3[0] + tab1Exo3[2] * tab2Exo3[1] + tab1Exo3[3] * tab2Exo3[0] + tab1Exo3[3] * tab2Exo3[1];
+                    for (int i = 0; i < tab1Exo3.length; i++)
+                    {
+                        for (int j = 0; j < tab2Exo3.length; j++)
+                        {
+                            Schtroumpf += tab1Exo3[i] * tab2Exo3[j];
+                        }
+                    }
+
                     System.out.println("Le Schtroumpf est de : " + Schtroumpf);
                     break;
 
@@ -129,17 +128,17 @@ public class Menu {
                     int[][] tabExo4 = new int[4][4];
 
                     // Exemple n°1
-                    /*tabExo4[0][0] = 1;tabExo4[0][1] = 0;tabExo4[0][2] = 0;tabExo4[0][3] = 0;
+                    tabExo4[0][0] = 1;tabExo4[0][1] = 0;tabExo4[0][2] = 0;tabExo4[0][3] = 0;
                     tabExo4[1][0] = 0;tabExo4[1][1] = 3;tabExo4[1][2] = 0;tabExo4[1][3] = 6;
                     tabExo4[2][0] = 0;tabExo4[2][1] = 0;tabExo4[2][2] = 0;tabExo4[2][3] = 0;
-                    tabExo4[3][0] = 0;tabExo4[3][1] = 0;tabExo4[3][2] = 0;tabExo4[3][3] = 0;*/
+                    tabExo4[3][0] = 0;tabExo4[3][1] = 0;tabExo4[3][2] = 0;tabExo4[3][3] = 0;
 
                     // Exemple n°2
 
-                    tabExo4[0][0] = 1;tabExo4[0][1] = 2;tabExo4[0][2] = 0;tabExo4[0][3] = 0;
-                    tabExo4[1][0] = 3;tabExo4[1][1] = 4;tabExo4[1][2] = 0;tabExo4[1][3] = 0;
-                    tabExo4[2][0] = 5;tabExo4[2][1] = 6;tabExo4[2][2] = 0;tabExo4[2][3] = 0;
-                    tabExo4[3][0] = 7;tabExo4[3][1] = 8;tabExo4[3][2] = 0;tabExo4[3][3] = 0;
+//                    tabExo4[0][0] = 1;tabExo4[0][1] = 2;tabExo4[0][2] = 0;tabExo4[0][3] = 0;
+//                    tabExo4[1][0] = 3;tabExo4[1][1] = 4;tabExo4[1][2] = 0;tabExo4[1][3] = 0;
+//                    tabExo4[2][0] = 5;tabExo4[2][1] = 6;tabExo4[2][2] = 0;tabExo4[2][3] = 0;
+//                    tabExo4[3][0] = 7;tabExo4[3][1] = 8;tabExo4[3][2] = 0;tabExo4[3][3] = 0;
 
 
                     int values = 0;
