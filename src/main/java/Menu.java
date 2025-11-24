@@ -109,10 +109,18 @@ public class Menu {
                     // Même remarque il faut faire des boucles
                     // Il faut que le programme fonctionne quel que soit le contenu de chaque tableau
 
-                    System.out.print(tab1Exo3[0] + " - " + tab1Exo3[1] + " - " + tab1Exo3[2] + " - " + tab1Exo3[3]);
+                    for (int i = 0; i < tab1Exo3.length; i++)
+                    {
+                        System.out.print(tab1Exo3[i] + " - ");
+                    }
                     System.out.println();
-                    System.out.print(tab2Exo3[0] + " - " + tab2Exo3[1]);
+
+                    for (int i = 0; i < tab2Exo3.length; i++)
+                    {
+                        System.out.print(tab2Exo3[i] + " - ");
+                    }
                     System.out.println();
+
                     Schtroumpf = tab1Exo3[0] * tab2Exo3[0] + tab1Exo3[0] * tab2Exo3[1] + tab1Exo3[1] * tab2Exo3[0] + tab1Exo3[1] * tab2Exo3[1] + tab1Exo3[2] * tab2Exo3[0] + tab1Exo3[2] * tab2Exo3[1] + tab1Exo3[3] * tab2Exo3[0] + tab1Exo3[3] * tab2Exo3[1];
                     System.out.println("Le Schtroumpf est de : " + Schtroumpf);
                     break;
