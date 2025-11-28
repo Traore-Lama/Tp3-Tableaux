@@ -13,10 +13,11 @@ public class Menu {
                 System.out.println("2 - Exercice n°2");
                 System.out.println("3 - Exercice n°3");
                 System.out.println("4 - Exercice n°4");
+                System.out.println("5 - Exercice n°5");
                 System.out.println("0 - Quitter");
                 System.out.print("Votre choix : ");
                 choix = scanner.nextInt();
-            } while (choix > 4);
+            } while (choix > 5);
 
             switch (choix) {
                 case 0:
@@ -142,31 +143,52 @@ public class Menu {
 
 
                     int values = 0;
-                    int ligne;
+                    String lignes ="";
+                    String colonnes = "";
 
                     // Oui pour les 2 boucles
-                    for (int i = 0; i < tabExo4.length; i++)
+                    for (int j = 0; j < tabExo4.length; j++)
                     {
-                        for (int j = 0; j < tabExo4[i].length; j++)
+                        for (int k = 0; k < tabExo4[j].length; k++)
                         {
-                            // Il faut tester si la case est nulle ou pas
-                            // Pour afficher le numéro de la ligne, donc i
-                            // Pour afficher le numéro de la colonne, donc j
-                            tabExo4[i][j] = i + j;
-                            System.out.print(tabExo4[i][j]);
-                            if(j < tabExo4[i].length - 1)
+                            System.out.print(tabExo4[j][k] + " - ");
+                            if (tabExo4[j][k]  != 0)
                             {
-                                System.out.print(" - ");
+                                values += tabExo4[j][k];
+                                lignes += tabExo4[0];
+                                colonnes += tabExo4[1];
                             }
                         }
                         System.out.println();
                     }
                     System.out.println("Valeurs : " + values);
-                    System.out.println("Lignes : ");
-                    System.out.println("Colones : ");
-
+                    System.out.println("Lignes : " + lignes);
+                    System.out.println("Colones : " + colonnes);
 
                     break;
+
+                case 5:
+                int[] t = new int[]{12,5,23,16,9,40};
+                int grand = 0;
+                int recup = 0;
+
+                for (int i = 0; i < t.length; i++)
+                {
+                    System.out.print(t[i] + " - ");
+                    if (grand > t[i])
+                    {
+                        recup = grand;
+                    }
+                    else
+                    {
+                        recup = t[i];
+                    }
+                }
+                System.out.println();
+                System.out.println("Valeur la plus petite : " + recup);
+
+
+                break;
             }
         } while (choix != 0);
     }
