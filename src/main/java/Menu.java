@@ -1,4 +1,3 @@
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 
@@ -155,8 +154,8 @@ public class Menu {
                             if (tabExo4[j][k]  != 0)
                             {
                                 values += tabExo4[j][k];
-                                lignes += tabExo4[0];
-                                colonnes += tabExo4[1];
+                                lignes += j + " - ";
+                                colonnes += k + " - ";
                             }
                         }
                         System.out.println();
@@ -168,25 +167,6 @@ public class Menu {
                     break;
 
                 case 5:
-                int[] t = new int[]{12,5,23,16,9,40};
-                int grand = 0;
-                int recup = 0;
-
-                for (int i = 0; i < t.length; i++)
-                {
-                    System.out.print(t[i] + " - ");
-                    if (grand > t[i])
-                    {
-                        recup = grand;
-                    }
-                    else
-                    {
-                        recup = t[i];
-                    }
-                }
-                System.out.println();
-                System.out.println("Valeur la plus petite : " + recup);
-
 
                 break;
             }
