@@ -26,6 +26,7 @@ public class Menu {
                     // Je declare un tableau
                     // Je luis mets 5 values
                     int[] tab = new int[5];
+                    int nbRecherche = scanner.nextInt();
 
                     // Je rempli le tableau
                     tab[0] = 31;
@@ -48,7 +49,23 @@ public class Menu {
                             max = tab[i];
                         }
                     }
-                    System.out.println("La + Grande values est : " + max);
+                    System.out.println("La + Grande valeur est : " + max);
+
+                    System.out.print("Valeur recherchée : ");
+
+                    boolean trouve = false;
+                    for(int i = 0; i < tab.length; i++)
+                    {
+                        if(nbRecherche == tab[i]){
+                            System.out.print("Position : " + i);
+                            trouve = true;
+                            break;
+                        }
+                        if(!trouve){
+                            System.out.print("Non trouvé");
+                        }
+
+                    }
 
                     break;
                 case 2:
