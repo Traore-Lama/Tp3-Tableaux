@@ -37,7 +37,7 @@ public class Menu {
 
                     //Parcourir le Tableau
                     for (int i = 0; i < tab.length; i++) {
-                        System.out.print(tab[i] + "-");
+                        System.out.print(tab[i] + " - ");
                     }
                     //Pour sauter une ligne
                     System.out.println();
